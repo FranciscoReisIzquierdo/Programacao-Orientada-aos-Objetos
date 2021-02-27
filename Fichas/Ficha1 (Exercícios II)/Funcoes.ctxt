@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Funcoes
+comment1.params=graus
+comment1.target=double\ celsiusParaFarenheit(double)
+comment2.params=a\ b
+comment2.target=int\ maximo(int,\ int)
+comment3.params=nome\ saldo
+comment3.target=java.lang.String\ criaDescricaoConta(java.lang.String,\ double)
+comment4.params=valor\ taxaConversao
+comment4.target=double\ eurosParaLibras(double,\ double)
+comment5.params=num1\ num2
+comment5.target=java.lang.String\ reverseOrderMed(double,\ double)
+comment6.params=num
+comment6.target=long\ factorial(int)
+comment7.params=
+comment7.target=long\ tempoGasto()
+numComments=8
