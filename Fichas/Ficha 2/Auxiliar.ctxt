@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Auxiliar
+comment1.params=
+comment1.target=int[]\ constroiArray()
+comment2.params=
+comment2.target=int[][]\ constroiNotasTurma()
+comment3.params=array\ i\ j
+comment3.target=int[]\ swap(int[],\ int,\ int)
+numComments=4
