@@ -2,7 +2,8 @@
 
 NOTA: SE APENAS DESEJA VER AS RESOLUÇÕES BASTA CLICAR NAS PASTAS QUE CONTÉM AS TERMINAÇÕES .JAVA 
 
-TITULO DO PROJETO: Resoluções das fichas
+##TITULO DO PROJETO: Resoluções das fichas
+
 OBJETIVO DO PROJETO: Realização de exercícios
 VERSÃO ou DATA: 2021
 INSTRUÇÕES PARA O USUÁRIO: Esta resolução foi feita no IDE BlueJ (Java) e apenas destina-se à resolução dos exercícios. 
