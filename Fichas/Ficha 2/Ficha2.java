@@ -300,6 +300,7 @@ public class Ficha2{
                     if(resultado_numbers.length== 5 && resultado_stars.length== 2) ex.imprimeChave(numeros, estrelas);
 
                 }
+                else System.out.println("Questao inexistente");
                 System.out.println("Insira o numero da questao (insira 0 se quiser sair do programa)");
         }
         System.out.println("Program killed");
