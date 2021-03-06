@@ -1,5 +1,7 @@
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.Random;
+
 
 
 public class Ficha2{
@@ -159,7 +161,6 @@ public class Ficha2{
                         alinea= sc2.next().charAt(0);
                     }
                 }
-                System.out.println("Insira o numero da questao (insira 0 se quiser sair do programa)");
                 }
                 if(question== 4){
                     System.out.println("Insira a letra da alinea (insira Q para sair da questao 4)");
@@ -182,10 +183,125 @@ public class Ficha2{
                         else System.out.println("Elemento encontrado : "+ valor);
                         System.out.println("Insira a letra da alinea (insira Q para sair da questao 4)");
                         alinea= sc2.next().charAt(0);
+                    } 
+                    else{
+                        System.out.println("Alinea inexistente. Insira uma alinea valida");
+                        alinea= sc2.next().charAt(0);
                     }
-            
                 }            
             }
+            /*if(question== 5){
+                System.out.println("Insira a letra da alinea (insira Q para sair da questao 5)");
+                char alinea= sc2.next().charAt(0);
+                while(alinea!= 'Q'){
+                    if(alinea== 'a'){
+                        System.out.println("Alinea a)");
+                        String array[]= aux.constroiArrayString();
+                        array= ex.removeRepeticoes(array);
+
+                        System.out.println("Insira a letra da alinea (insira Q para sair da questao 5)");
+                        alinea= sc2.next().charAt(0);
+                    }
+                }                       
+            }   */   
+            if(question== 6){
+                System.out.println("Insira a letra da alinea (insira Q para sair da questao 6)");
+                char alinea= sc2.next().charAt(0);
+                while(alinea!= 'Q'){
+                    if(alinea== 'a'){
+                        System.out.println("Alinea a)");
+                        System.out.println("Numero de linhas da matriz");
+                        int linhas= sc2.nextInt();
+                        System.out.println("Numero de colunas da matriz");
+                        int colunas= sc2.nextInt();
+                        int matriz[][];
+                        matriz= aux.constroiMatriz(linhas, colunas);
+                        aux.imprimeMatriz(matriz);
+                        System.out.println("Insira a letra da alinea (insira Q para sair da questao 6)");
+                        alinea= sc2.next().charAt(0);
+                    }
+                    else if(alinea== 'b'){
+                        System.out.println("Alinea b)");
+                        System.out.println("Numero de linhas das matrizes");
+                        int linhas= sc2.nextInt();
+                        System.out.println("Numero de colunas das matrizes");
+                        int colunas= sc2.nextInt();
+                        int matriz1[][];
+                        int matriz2[][];
+                        System.out.println("Matriz 1");
+                        matriz1= aux.constroiMatriz(linhas, colunas);
+                        System.out.println("Matriz 2");
+                        matriz2= aux.constroiMatriz(linhas, colunas);
+                        int matrizResultado[][]= new int[linhas][colunas];
+                        matrizResultado= ex.somaMatrizes(matriz1, matriz2);
+                        aux.imprimeMatriz(matrizResultado);
+                        System.out.println("Insira a letra da alinea (insira Q para sair da questao 6)");
+                        alinea= sc2.next().charAt(0); 
+                    }
+                    else if(alinea== 'c'){
+                        System.out.println("Alinea c)");
+                        System.out.println("Numero de linhas das matrizes");
+                        int linhas= sc2.nextInt();
+                        System.out.println("Numero de colunas das matrizes");
+                        int colunas= sc2.nextInt();
+                        int matriz1[][];
+                        int matriz2[][];
+                        System.out.println("Matriz 1");
+                        matriz1= aux.constroiMatriz(linhas, colunas);
+                        System.out.println("Matriz 2");
+                        matriz2= aux.constroiMatriz(linhas, colunas);
+                        boolean flag= ex.comparaMatrizes(matriz1, matriz2);
+                        if(flag) System.out.println("As matrizes sao iguais");
+                        else System.out.println("As matrizes nao sao iguais");
+                        System.out.println("Insira a letra da alinea (insira Q para sair da questao 6)");
+                        alinea= sc2.next().charAt(0); 
+                    }
+                    else if(alinea== 'd'){
+                        System.out.println("Alinea d)");
+                        System.out.println("Numero de linhas da matriz");
+                        int linhas= sc2.nextInt();
+                        System.out.println("Numero de colunas da matriz");
+                        int colunas= sc2.nextInt();
+                        int matriz[][];
+                        matriz= aux.constroiMatriz(linhas, colunas);
+                        int oposta[][];
+                        oposta= ex.matrizOposta(matriz, linhas, colunas);
+                        System.out.println("Matriz original");
+                        aux.imprimeMatriz(matriz);
+                        System.out.println("Matriz oposta");
+                        aux.imprimeMatriz(oposta);
+                        System.out.println("Insira a letra da alinea (insira Q para sair da questao 6)");
+                        alinea= sc2.next().charAt(0);
+                    }  
+                    else{
+                        System.out.println("Alinea inexistente. Insira uma alinea valida");
+                        alinea= sc2.next().charAt(0);
+                    }
+                }
+            }
+            if(question== 7){
+                    System.out.println("Exercicio 7");
+                    int numeros[]= ex.geraNumeros();
+                    int estrelas[]= ex.geraEstrelas();
+                    
+                    System.out.println("Insira os 5 numeros");
+                    int user_numb[]= aux.insereNumeros();
+                    System.out.println("Insira as 2 estrelas");
+                    int user_stars[]= aux.insereEstrelas();
+                    
+                    int resultado_numbers[]= ex.comparaNumeros(numeros, user_numb);
+                    int resultado_stars[]= ex.comparaNumeros(estrelas, user_stars);
+                    System.out.println("Chave: ");
+                    System.out.print("Numeros: "+ Arrays.toString(numeros));
+                    System.out.println(" Estrelas: "+ Arrays.toString(estrelas));
+                    
+                    System.out.println("Numeros coincidentes: "+ Arrays.toString(resultado_numbers));
+                    System.out.println("Estrelas coincidentes: "+ Arrays.toString(resultado_stars));
+                    if(resultado_numbers.length== 5 && resultado_stars.length== 2) ex.imprimeChave(numeros, estrelas);
+
+                }
+                System.out.println("Insira o numero da questao (insira 0 se quiser sair do programa)");
         }
+        System.out.println("Program killed");
     }
 }

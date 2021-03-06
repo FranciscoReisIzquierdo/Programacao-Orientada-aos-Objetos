@@ -1,11 +1,11 @@
 #BlueJ package file
-dependency1.from=Ficha2
-dependency1.to=Exercicios
+dependency1.from=Exercicios
+dependency1.to=Auxiliar
 dependency1.type=UsesDependency
 dependency2.from=Ficha2
-dependency2.to=Auxiliar
+dependency2.to=Exercicios
 dependency2.type=UsesDependency
-dependency3.from=Exercicios
+dependency3.from=Ficha2
 dependency3.to=Auxiliar
 dependency3.type=UsesDependency
 editor.fx.0.height=1053

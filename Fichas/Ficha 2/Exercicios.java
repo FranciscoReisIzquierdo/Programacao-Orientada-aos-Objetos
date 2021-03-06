@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 
 
 public class Exercicios{
@@ -139,6 +140,120 @@ public class Exercicios{
         }
         return -1;
         
-    }     
-        
+    }  
+    /*
+    public String[] removeRepeticoes(String array[]){
+        int i= 0, j= 1, tamanho= array.length, tam= 0;
+        while(i< tamanho){
+            int index= j;
+            while(j< tamanho){
+                if(array[j]!= array[i]){
+                    array[index++]= array[j++]; tam++;
+                }
+                else j++;
+            }
+            tamanho= tamanho- (j- index);
+            i++; j= i+ 1;
+        }
+        String[] resultado= new String[tam];
+        System.arraycopy(array, 0, resultado, 0, tam);
+        System.out.println("Teste");
+        for(int k= 0; k< tam; System.out.println(resultado[k++]));
+        return resultado;
+    }*/
+    
+    public int[][] somaMatrizes(int matriz1[][], int matriz2[][]){
+        int linhas= matriz1.length, colunas= matriz1[0].length;
+        int matrizResultado[][]= new int[linhas][colunas];
+        for(int i= 0; i< linhas; i++){
+            for(int j= 0; j< colunas; j++) matrizResultado[i][j]= matriz1[i][j]+ matriz2[i][j];
+        }
+        return matrizResultado;
+    } 
+    
+    public boolean comparaMatrizes(int matriz1[][], int matriz2[][]){
+        boolean flag= true;
+        for(int i= 0; i< matriz1.length && flag; i++){
+            for(int j= 0; j< matriz1[0].length && flag; j++) if(matriz1[i][j]!= matriz2[i][j]) flag= false;
+        }
+        return (flag? true: false);
+    }
+    
+    public int simetricoInt(int numero){
+        if(numero> 0) numero= 0- numero;
+        else if(numero< 0) numero= numero;
+        else numero= 0;
+        return numero;
+    }
+    
+    public int[][] matrizOposta(int matriz[][], int linhas, int colunas){
+        int elemento= 0;
+        int oposta[][]= new int[linhas][colunas];
+        for(int i= 0; i< linhas; i++){
+            for(int j= 0; j< colunas; j++){
+               oposta[i][j]= simetricoInt(matriz[i][j]);
+            } 
+        }
+        return oposta;
+    }
+    
+    public int[] geraNumeros(){
+        Random gerador= new Random();
+        int numeros[]= new int[5];
+        int i= 0, indice_n= 0, j= 0, number= 0;
+        while(i< 5){
+            number= gerador.nextInt(50)+ 1;
+            for(j= 0; j< indice_n && numeros[j]!= number; j++);
+            if(j== indice_n){
+                numeros[indice_n++]= number; i++;
+            }
+        }
+        return numeros;
+    }
+    
+    public int[] geraEstrelas(){
+        Random gerador= new Random();
+        int estrelas[]= new int[2];
+        int i= 0, indice_s= 0, j= 0, number= 0;
+        while(i< 2){
+            number= gerador.nextInt(9)+ 1;
+            for(j= 0; j< indice_s && estrelas[j]!= number; j++);
+            if(j== indice_s){
+                estrelas[indice_s++]= number; i++;
+            }
+        }
+        return estrelas;
+    }
+    
+    public int[] comparaNumeros(int machine[], int user[]){
+        int tam= machine.length, indice= 0;
+        int resultado[]= new int[tam];
+        for(int i= 0; i< tam; i++){
+            for(int j= 0; j< tam; j++){
+                if(user[i]== machine[j]){
+                    resultado[indice++]= user[i];
+                    break;
+                }
+            }
+        }
+        int[] result= new int[indice];
+        System.arraycopy(resultado, 0, result, 0, indice);
+        return result;
+    }
+    
+    public void imprimeChave(int numeros[], int estrelas[]){
+        System.out.println("Jackpot!!!");
+        int coluna= 0;
+        for(int i= 0; i< 50; i++){
+            for(int j= 0; j< coluna; j++) System.out.print(" ");
+            System.out.print("Numeros: "+ Arrays.toString(numeros)+ " Estrelas: "+ Arrays.toString(estrelas));
+            coluna+= 2;
+            System.out.println();
+        }
+    }
+    
+    
+    
+    
+    
 }
