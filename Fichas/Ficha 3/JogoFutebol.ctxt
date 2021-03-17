@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=JogoFutebol
+comment1.params=
+comment1.target=JogoFutebol()
+comment2.params=
+comment2.target=void\ startGame()
+comment3.params=
+comment3.target=void\ endGame()
+comment4.params=
+comment4.target=void\ goloVisitado()
+comment5.params=
+comment5.target=void\ goloVisitante()
+comment6.params=
+comment6.target=java.lang.String\ resultadoActual()
+numComments=7

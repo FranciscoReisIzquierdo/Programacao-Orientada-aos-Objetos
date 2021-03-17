@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Telemovel
+comment1.params=
+comment1.target=Telemovel()
+comment2.params=numeroBytes
+comment2.target=boolean\ existeEspaco(int)
+comment3.params=nome\ tamanho
+comment3.target=void\ instalaApp(java.lang.String,\ int)
+comment4.params=msg
+comment4.target=void\ recebeMsg(java.lang.String)
+comment5.params=
+comment5.target=double\ tamMedioApps()
+comment6.params=
+comment6.target=java.lang.String\ maiorMsg()
+comment7.params=nome\ tamanho
+comment7.target=void\ removeApp(java.lang.String,\ int)
+numComments=8
