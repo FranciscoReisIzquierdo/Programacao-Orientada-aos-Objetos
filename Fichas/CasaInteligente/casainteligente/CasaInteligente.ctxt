@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=CasaInteligente
+comment1.params=
+comment1.target=CasaInteligente()
+comment10.params=bulb
+comment10.target=void\ addDevice(SmartBulb)
+comment11.params=speaker
+comment11.target=void\ addDevice(SmartSpeaker)
+comment2.params=morada
+comment2.target=CasaInteligente(java.lang.String)
+comment3.params=id
+comment3.target=SmartDevice\ getDevice(java.lang.String)
+comment4.params=on
+comment4.target=void\ setAllOn(boolean)
+comment5.params=room\ id
+comment5.target=boolean\ roomHasDevice(java.lang.String,\ java.lang.String)
+comment6.params=room\ id
+comment6.target=void\ addToRoom(java.lang.String,\ java.lang.String)
+comment7.params=room
+comment7.target=boolean\ hasRoom(java.lang.String)
+comment8.params=id
+comment8.target=boolean\ existsDevice(java.lang.String)
+comment9.params=room
+comment9.target=void\ addRoom(java.lang.String)
+numComments=12

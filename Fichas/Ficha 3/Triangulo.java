@@ -1,5 +1,5 @@
 
-public class Triangulo{
+public class Triangulo implements Comparable<Triangulo>{
     //Variaveis de instancia
     private Ponto p1, p2, p3;
     
@@ -31,7 +31,7 @@ public class Triangulo{
         return Math.sqrt(s* (s- a)* (s- b)* (s- c));
     }
     
-    public double CalculaPerimetroTriangulo(){
+    public double calculaPerimetroTriangulo(){
         double a, b, c;
         a= this.p1.distancia(this.p2);
         b= this.p1.distancia(this.p3);
@@ -73,5 +73,10 @@ public class Triangulo{
     
     public String toString(){
         return "Triangulo: "+ p1.toString()+ "| "+ p2.toString()+ "| "+ p3.toString();
+    }
+    
+    //compareTo- baseado na ordenaçao crescente da area do triangulo
+    public int compareTo(Triangulo t){
+        return (int)(this.calculaAreaTriangulo()- t.calculaAreaTriangulo());
     }
 }

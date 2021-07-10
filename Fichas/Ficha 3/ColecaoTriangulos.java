@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.Iterator;
+import java.util.TreeSet;
+import java.util.Comparator;
+import java.util.Set;
 
 
 public class ColecaoTriangulos{
@@ -63,12 +67,56 @@ public class ColecaoTriangulos{
         return res.clone();
     }
     
+    //Outra versao com iteradores
+    public Triangulo tComMaxAreaIterator(){
+        double max = 0;
+        Triangulo res= new Triangulo();
+        
+        Iterator<Triangulo> it= this.triangulos.iterator();
+        while(it.hasNext()){
+            Triangulo t= it.next();
+            double area= t.calculaAreaTriangulo();
+            if(max < area) {
+                res = t;
+                max = area;
+            }
+        }
+        return res.clone();
+    }
+    
+    //Outra implementaçao do metodo recorrendo a ordenaçao com Set<Triangulo> 
+    //1) ordem natural- confiar na implementacao do compareTo na clase Triangulo
+    public Triangulo tComMaxAreav2(){
+        TreeSet<Triangulo> ord= new TreeSet<>();
+        
+        for(Triangulo t: this.triangulos) ord.add(t);
+        return ord.last().clone();
+
+    }
+    
+    //Outra implementaçao do metodo recorrendo a ordenaçao com Set<Triangulo> 
+    //1) comparador- definir uma implementacao de comparaçao
+    public Triangulo tComMaxAreav3(){
+        Comparator<Triangulo> comp= (t1, t2)-> (int)(t1.calculaAreaTriangulo()- t2.calculaAreaTriangulo());
+        TreeSet<Triangulo> ord= new TreeSet<>(comp);
+        
+        for(Triangulo t: this.triangulos) ord.add(t);
+        return ord.last().clone();
+    }
+    
+    //Devolver um Set<Triangulo> ordenado decrescentemente por perimetro
+    public Set<Triangulo> ordenaOrdemDecrescente(){
+        TreeSet<Triangulo> res= new TreeSet<>(new PerimetroDecrescente());
+        for(Triangulo t: this.triangulos) res.add(t.clone());
+        return res;
+    }
+    
     public Triangulo tComMaxPerimetro(){
         double max = 0;
         Triangulo res= new Triangulo();
 
         for(Triangulo t : this.triangulos) {
-            double perimetro= t.CalculaPerimetroTriangulo();
+            double perimetro= t.calculaPerimetroTriangulo();
             if(max < perimetro) {
                 res = t;
                 max = perimetro;
@@ -78,7 +126,7 @@ public class ColecaoTriangulos{
     }
     
     public String toString(){
-        return this.triangulos.toString();
+        return "Colecao Triangulos: "+ this.triangulos.toString();
     }
     
     public boolean equals(Object o){

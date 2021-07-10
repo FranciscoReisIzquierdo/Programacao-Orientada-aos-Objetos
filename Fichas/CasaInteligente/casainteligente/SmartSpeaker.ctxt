@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=SmartSpeaker
+comment1.params=
+comment1.target=SmartSpeaker()
+comment10.params=speaker
+comment10.target=boolean\ equals(java.lang.Object)
+comment2.params=nome
+comment2.target=SmartSpeaker(java.lang.String)
+comment3.params=nome\ canal\ volume
+comment3.target=SmartSpeaker(java.lang.String,\ java.lang.String,\ int)
+comment4.params=
+comment4.target=int\ getVolume()
+comment5.params=
+comment5.target=java.lang.String\ getChannel()
+comment6.params=volume
+comment6.target=void\ setVolume(int)
+comment7.params=canal
+comment7.target=void\ setChannel(java.lang.String)
+comment8.params=
+comment8.target=void\ volumeUp()
+comment9.params=
+comment9.target=void\ volumeDown()
+numComments=11

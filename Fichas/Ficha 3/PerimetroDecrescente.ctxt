@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=PerimetroDecrescente
+comment0.text=\n\ Comparador\ de\ Triangulos\n\ Implementa\ uma\ compara\u00E7ao\ por\ ordem\ decrescente\ de\ perimetro\n\ \n\ @author\ (seu\ nome)\ \n\ @version\ (n\u00FAmero\ de\ vers\u00E3o\ ou\ data)\n
+comment1.params=t1\ t2
+comment1.target=int\ compare(Triangulo,\ Triangulo)
+numComments=2
