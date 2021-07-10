@@ -2,7 +2,7 @@
 
 NOTA: SE APENAS DESEJA VER AS RESOLUÇÕES BASTA CLICAR NAS PASTAS QUE CONTÉM AS TERMINAÇÕES .JAVA 
 
-TITULO DO PROJETO: Resoluções das fichas
+TITULO DO PROJETO: Resoluções de algumas fichas e avaliações contínuas
 
 OBJETIVO DO PROJETO: Realização de exercícios
 
